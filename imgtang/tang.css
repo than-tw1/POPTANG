@@ -1,0 +1,77 @@
+*{
+    padding:0;
+    margin:0;
+
+}
+html{
+    overflow: hidden;
+}
+.phone{
+    width:10rem;
+    height: 20rem;
+    background-image: url("shutmouth.jpg");
+    background-size:cover;
+
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    animation: rainbow 0.5s ease-out infinite;
+    overflow: hidden;
+}
+.box h1{
+    color: rgb(255, 25, 0);
+}
+.box p{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    animation: text 1s ease-out infinite;
+}
+.score{
+    font-weight: 500;
+}
+@keyframes rainbow{
+    0%{
+        background-color: aqua;
+    }
+    33%{
+        background-color: rgb(255, 43, 234);
+    }
+    66%{
+        background-color: rgb(215, 255, 36);
+
+    }
+}
+@keyframes text{
+    0%{
+        color: rgb(255, 24, 197);
+    }
+    25%{
+        color: rgb(255, 12, 12);
+    }
+    50%{
+        color: rgb(85, 255, 0);
+    }
+    75%{
+        color: rgb(0, 21, 255);
+    }
+}
+.obj{
+    position: absolute;
+    width: 150px;
+    left: -150px;
+    animation: moveright 1s ease-out ;
+}
+@keyframes moveright{
+    0%{
+        left:-100px;
+    }
+    
+    100%{
+        left:100%;
+    }
+}

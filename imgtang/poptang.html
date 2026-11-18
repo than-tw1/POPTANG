@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPTANG</title>
+    <link rel="stylesheet" href="tang.css">
+</head>
+
+<body>
+    <img src="https://obs-ect.line-scdn.net/r/ect/ect/cj0xMTNvcW11dGxmMjEwJnM9anA2JnQ9bSZ1PTFmdjNscmI3ODNhMDAmaT0w" class="obj">
+
+    <div>
+        <h1 class="score">0</h1>
+    </div>
+    <div class="phone" onclick="pop()">
+    </div>
+    
+    
+
+<div class="box">
+    <h1>POPTANG</h1>
+    <p>click me!</p>
+</div>
+    <script>
+        let count = 0;
+        let obj = document.querySelector(".obj");
+
+
+        function pop() {
+            document.querySelector(".phone").style.backgroundImage = "url('openmouth.jpg')";
+            count++;
+            obj.style.animation = "none";
+            void obj.offsetWidth;
+            obj.style.animation = "moveright 1s ease-in-out";
+            document.querySelector(".score").textContent = count;
+            setTimeout(function () {
+                document.querySelector(".phone").style.backgroundImage = "url('shutmouth.jpg')";
+            }, 100)
+        }
+    </script>
+
+</body>
+
+</html>
